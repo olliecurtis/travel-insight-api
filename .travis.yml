@@ -13,7 +13,7 @@ before_install:
 cache: bundler
 script: bundle exec middleman build
 deploy:
-  local-dir: build
+  local_dir: build
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
