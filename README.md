@@ -1,3 +1,55 @@
+Getting Started with Travel Insight API Documentation
+------------------------------
+
+[![Build Status](https://travis-ci.org/Skyscanner/travel-insight-api.svg?branch=master)](https://travis-ci.org/Skyscanner/travel-insight-api)
+
+The generated documentation can be found at <a href="https://skyscanner.github.io/travel-insight-api">skyscanner.github.io/travel-insight-api</a>
+
+### Setting up the project
+
+1. Clone this repository to your local
+2. To view the page locally, do the following:
+```shell
+# either run this to run locally
+bundle install
+bundle exec middleman server
+
+# OR run this to run with vagrant
+vagrant up
+
+# OR run this to run with docker
+docker-compose build
+docker-compose up
+```
+You can now see the docs at http://localhost:4567.
+
+## Add a section to the page
+1. Create a new file in the `source/includes` folder: e.g. `_new_api.md`
+2. Write your documentation in markdown. For all markdown syntax please see the official Slate docs: [editing Slate markdown](https://github.com/slatedocs/slate/wiki/Markdown-Syntax).
+3. Add your new documentation file in `index.html.md`, under the `includes` section
+```markdown
+includes: 
+   - introduction
+   - questions
+   - scope
+   - authentication
+   - aggregation_api
+   - exits
+   - searches
+```
+
+You may find the tool [<em>swagger-to-slate</em>](https://www.npmjs.com/package/swagger-to-slate) useful for converting swagger-formatted files to slate (works only for certain conversions)
+
+## Publishing
+1. Create a pull request to this repo
+2. Merge into master
+3. Travis will automatically deploy to Github pages from master
+
+
+
+Official Slate README
+------------------------------
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
   <br>
