@@ -3,7 +3,6 @@ sudo: false
 language: ruby
 
 rvm:
-  - 2.3.3
   - 2.4.0
 
 before_install:
@@ -13,7 +12,6 @@ before_install:
 cache: bundler
 script: bundle exec middleman build
 deploy:
-  local_dir: build
   provider: pages
   cleanup: true
   token: $GITHUB_TOKEN
