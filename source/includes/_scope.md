@@ -8,7 +8,7 @@
 -	**destinationCountry:** The destination country of the first leg's last segment
 -	**originIATA:** Origin IATA airport code
 -	**destinationIATA:** Destination IATA airport code
--	**cabinClass:** Cabin class type, either ECONOMY, BUSINESS, PREMIUM_ECONOMY, FIRST
+-	**cabinClass:** Cabin class type, either ECONOMY, BUSINESS, PREMIUMECONOMY, FIRST
 -	**departureDate:** Departure date
 -	**returnDate:** Return date
 -	**pax:** Passenger count
@@ -22,7 +22,7 @@
 - **destinationCountry:** The destination country of the first leg's last segment
 - **originIATA:** Origin IATA airport code
 - **destinationIATA:** Destination IATA airport code
-- **cabinClass:** Cabin class type, either ECONOMY, BUSINESS, PREMIUM_ECONOMY, FIRST
+- **cabinClass:** Cabin class type, either ECONOMY, BUSINESS, PREMIUMECONOMY, FIRST
 - **departureDate:** Departure date
 - **returnDate:** Return date
 - **departureTimeOfDay:** Departure time of day. Either 'EARLY_MORNING', 'MORNING', 'AFTERNOON', 'EVENING'. Early Morning (0000 to 0600), Morning (0600 to 1200), Afternoon (1200 to 1800), Evening (1800 to 2400)
