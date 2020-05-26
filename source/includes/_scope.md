@@ -14,6 +14,7 @@
 -	**pax:** Passenger count
 -	**route:** The first leg's origin city concatenated with the final leg's destination city.
 -	**kind:** Trip type. Either 'RETURN', 'ONE_WAY' or 'MULTI_CITY'
+-   **daysBeforeTravel:** Number of days between departure date and search date
 
 
 ### On exits(**redirects**) data:
@@ -32,6 +33,8 @@
 - **stops:** Number of stops
 - **route:** The first leg's origin city concatenated with the final leg's destination city.
 - **pax:** Passenger count
+- **daysBeforeTravel:** Number of days between departure date and search date
+
 
 
 ## Supported Query Criteria 
