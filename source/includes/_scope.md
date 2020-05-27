@@ -14,7 +14,9 @@
 - **pax:** Passenger count
 - **route:** The first leg's origin city concatenated with the final leg's destination city.
 - **kind:** Trip type. Either 'RETURN', 'ONE_WAY' or 'MULTI_CITY'
-(Queryable for data from 17 May onwards)
+
+(Queryable for data from 17 May 2020 onwards)
+
 - **daysBeforeTravel:** Number of days between departure date and search date
 - **travelMonth:** Month of departure date
 - **dayOfWeek:** Day of departure date (1 represents Monday, 7 represents Sunday)
@@ -38,7 +40,9 @@
 - **stops:** Number of stops
 - **route:** The first leg's origin city concatenated with the final leg's destination city.
 - **pax:** Passenger count
-(Queryable for data from 17 May onwards)
+
+(Queryable for data from 17 May 2020 onwards)
+
 - **daysBeforeTravel:** Number of days between departure date and search date
 - **travelMonth:** Month of departure date
 - **dayOfWeek:** Day of departure date (1 represents Monday, 7 represents Sunday)
