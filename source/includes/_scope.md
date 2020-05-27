@@ -3,18 +3,23 @@
 ## Supported Dimensions (used in both filters and groupBy query parameter)
 
 ### On searches data: 
--	**market:** Name of the country user has selected or Skyscanner domain being used
--	**originCountry:** The country of the first leg's first segment
--	**destinationCountry:** The destination country of the first leg's last segment
--	**originIATA:** Origin IATA airport code
--	**destinationIATA:** Destination IATA airport code
--	**cabinClass:** Cabin class type, either ECONOMY, BUSINESS, PREMIUMECONOMY, FIRST
--	**departureDate:** Departure date
--	**returnDate:** Return date
--	**pax:** Passenger count
--	**route:** The first leg's origin city concatenated with the final leg's destination city.
--	**kind:** Trip type. Either 'RETURN', 'ONE_WAY' or 'MULTI_CITY'
--   **daysBeforeTravel:** Number of days between departure date and search date
+- **market:** Name of the country user has selected or Skyscanner domain being used
+- **originCountry:** The country of the first leg's first segment
+- **destinationCountry:** The destination country of the first leg's last segment
+- **originIATA:** Origin IATA airport code
+- **destinationIATA:** Destination IATA airport code
+- **cabinClass:** Cabin class type, either ECONOMY, BUSINESS, PREMIUMECONOMY, FIRST
+- **departureDate:** Departure date
+- **returnDate:** Return date
+- **pax:** Passenger count
+- **route:** The first leg's origin city concatenated with the final leg's destination city.
+- **kind:** Trip type. Either 'RETURN', 'ONE_WAY' or 'MULTI_CITY'
+(Queryable for data from 17 May onwards)
+- **daysBeforeTravel:** Number of days between departure date and search date
+- **travelMonth:** Month of departure date
+- **dayOfWeek:** Day of departure date (1 represents Monday, 7 represents Sunday)
+- **lengthOfTripInDays:** Number of days between return date and departure date
+- **travelType:** Travel type. Either 'INTERNATIONAL' or 'DOMESTIC'
 
 
 ### On exits(**redirects**) data:
@@ -33,7 +38,13 @@
 - **stops:** Number of stops
 - **route:** The first leg's origin city concatenated with the final leg's destination city.
 - **pax:** Passenger count
+(Queryable for data from 17 May onwards)
 - **daysBeforeTravel:** Number of days between departure date and search date
+- **travelMonth:** Month of departure date
+- **dayOfWeek:** Day of departure date (1 represents Monday, 7 represents Sunday)
+- **lengthOfTripInDays:** Number of days between return date and departure date
+- **firstMarketingCarrier:** First marketing carrier code
+- **travelType:** Travel type. Either 'INTERNATIONAL' or 'DOMESTIC'
 
 
 
