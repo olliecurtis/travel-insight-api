@@ -245,6 +245,9 @@
                     <a href="#supported-dimensions-used-in-both-filters-and-groupby-query-parameter" class="toc-h2 toc-link" data-title="Supported Dimensions (used in both filters and groupBy query parameter)">Supported Dimensions (used in both filters and groupBy query parameter)</a>
                   </li>
                   <li>
+                    <a href="#supported-aggregations" class="toc-h2 toc-link" data-title="Supported Aggregations">Supported Aggregations</a>
+                  </li>
+                  <li>
                     <a href="#supported-query-criteria" class="toc-h2 toc-link" data-title="Supported Query Criteria">Supported Query Criteria</a>
                   </li>
               </ul>
@@ -333,6 +336,14 @@
 <li><strong>route:</strong> The first leg&#39;s origin city concatenated with the final leg&#39;s destination city.</li>
 <li><strong>pax:</strong> Passenger count</li>
 </ul>
+<h2 id='supported-aggregations'>Supported Aggregations</h2><h3 id='on-searches-data-2'>On searches data</h3>
+<ul>
+<li>  <strong>count:</strong> Total number of rows matching given groupby combinations</li>
+</ul>
+<h3 id='on-redirects-data'>On redirects data</h3>
+<ul>
+<li>  <strong>count:</strong> Total number of rows matching given groupby combinations</li>
+</ul>
 <h2 id='supported-query-criteria'>Supported Query Criteria</h2>
 <ul>
 <li>  Max number of <code>filter</code>s allowed in a query: 11</li>
@@ -374,7 +385,8 @@
   </span><span class="s2">"startDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"groupBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">]</span><span class="w">
+  </span><span class="s2">"groupBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -468,7 +480,8 @@
   </span><span class="s2">"startDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"groupBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">]</span><span class="w">
+  </span><span class="s2">"groupBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
