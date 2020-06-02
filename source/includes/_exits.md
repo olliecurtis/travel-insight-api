@@ -9,7 +9,8 @@
   "startDate": "string",
   "endDate": "string",
   "filter": "string",
-  "groupBy": ["string"]
+  "groupBy": ["string"],
+  "aggregations": ["count"]
 }
 ```
 

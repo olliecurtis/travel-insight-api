@@ -34,6 +34,16 @@
 - **pax:** Passenger count
 
 
+## Supported Aggregations
+
+### On searches data
+-   **count:** Total number of rows matching given groupby combinations
+
+### On redirects data
+-   **count:** Total number of rows matching given groupby combinations
+
+
+
 ## Supported Query Criteria 
 -	Max number of `filter`s allowed in a query: 11
 -	Max number of dimensions allowed in a `groupBy` query parameter: 3
