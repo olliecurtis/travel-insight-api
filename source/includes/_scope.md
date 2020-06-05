@@ -41,6 +41,7 @@
 
 ### On redirects data
 -   **count:** Total number of rows matching given groupby combinations
+-   **averageFarePerPax:** Average Fare per Pax in USD
 
 
 
