@@ -26,7 +26,12 @@
           "value": "SG"
         }
       ],
-      "aggregations": "count"
+      "aggregations": [
+        {
+          "name": "count",
+          "value": "123"
+        }
+      ]
     }
   ]
 }
