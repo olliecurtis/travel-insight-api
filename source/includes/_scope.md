@@ -32,6 +32,7 @@
 - **stops:** Number of stops
 - **route:** The first leg's origin city concatenated with the final leg's destination city.
 - **pax:** Passenger count
+- **journeyDuration:** Journey duration in minutes
 
 
 ## Supported Aggregations
