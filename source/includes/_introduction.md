@@ -20,7 +20,7 @@ It’s easy to use and simple to plug into your Power BI tools.
 
 ## How does it work? 
 
-For a given Origin and Destination itinerary, Travel Insight API parses previously searched itineraries (last one month for beta testing) across an array of specified dates. The service is highly customisable and offers unsurpassed search criteria, including filtering such as multiple lengths of stay, number of stops, day of week, departure/arrival time window, etc.
+For a given Origin and Destination itinerary, Travel Insight API parses previously searched itineraries across an array of specified dates. The service is highly customisable and offers unsurpassed search criteria, including filtering such as multiple lengths of stay, number of stops, day of week, departure/arrival time window, etc.
 
 ## Aggregation API provides two endpoints to submit analytics queries:
 - **/searches:** runs analytical query on searches data

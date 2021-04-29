@@ -10,7 +10,7 @@
   "endDate": "string",
   "filter": "string",
   "groupBy": ["string"],
-  "aggregations": ["count"]
+  "aggregations": ["count", "averageFarePerPax"]
 }
 ```
 
@@ -26,7 +26,16 @@
           "value": "SG"
         }
       ],
-      "aggregations": "count"
+      "aggregations": [
+        {
+          "name": "count",
+          "value": "123"
+        },
+        {
+          "name": "averageFarePerPax",
+          "value": "765.43"
+        },
+      ]
     }
   ]
 }
