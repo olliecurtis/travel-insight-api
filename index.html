@@ -239,7 +239,7 @@
               </ul>
           </li>
           <li>
-            <a href="#scope-of-api-for-beta-release" class="toc-h1 toc-link" data-title="Scope of API for Beta Release">Scope of API for Beta Release</a>
+            <a href="#scope-of-api" class="toc-h1 toc-link" data-title="Scope of API">Scope of API</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#supported-dimensions-used-in-both-filters-and-groupby-query-parameter" class="toc-h2 toc-link" data-title="Supported Dimensions (used in both filters and groupBy query parameter)">Supported Dimensions (used in both filters and groupBy query parameter)</a>
@@ -286,7 +286,7 @@
 <h3 id='easy-accessibility'>Easy Accessibility</h3>
 <p>It’s easy to use and simple to plug into your Power BI tools. </p>
 <h2 id='how-does-it-work'>How does it work?</h2>
-<p>For a given Origin and Destination itinerary, Travel Insight API parses previously searched itineraries (last one month for beta testing) across an array of specified dates. The service is highly customisable and offers unsurpassed search criteria, including filtering such as multiple lengths of stay, number of stops, day of week, departure/arrival time window, etc.</p>
+<p>For a given Origin and Destination itinerary, Travel Insight API parses previously searched itineraries across an array of specified dates. The service is highly customisable and offers unsurpassed search criteria, including filtering such as multiple lengths of stay, number of stops, day of week, departure/arrival time window, etc.</p>
 <h2 id='aggregation-api-provides-two-endpoints-to-submit-analytics-queries'>Aggregation API provides two endpoints to submit analytics queries:</h2>
 <ul>
 <li><p><strong>/searches:</strong> runs analytical query on searches data</p></li>
@@ -304,7 +304,7 @@
 <li>  Which were the most searched destinations from a given origin such as Nice in Nov 2019, or any period selected?</li>
 <li>  Where were people flying to from an origin such as Madrid during Oct 2019 and Jan 2019?</li>
 </ul>
-<h1 id='scope-of-api-for-beta-release'>Scope of API for Beta Release</h1><h2 id='supported-dimensions-used-in-both-filters-and-groupby-query-parameter'>Supported Dimensions (used in both filters and groupBy query parameter)</h2><h3 id='on-searches-data'>On searches data:</h3>
+<h1 id='scope-of-api'>Scope of API</h1><h2 id='supported-dimensions-used-in-both-filters-and-groupby-query-parameter'>Supported Dimensions (used in both filters and groupBy query parameter)</h2><h3 id='on-searches-data'>On searches data:</h3>
 <ul>
 <li>  <strong>market:</strong> Name of the country user has selected or Skyscanner domain being used</li>
 <li>  <strong>originCountry:</strong> The country of the first leg&#39;s first segment</li>
@@ -317,6 +317,18 @@
 <li>  <strong>pax:</strong> Passenger count</li>
 <li>  <strong>route:</strong> The first leg&#39;s origin city concatenated with the final leg&#39;s destination city.</li>
 <li>  <strong>kind:</strong> Trip type. Either &#39;RETURN&#39;, &#39;ONE_WAY&#39; or &#39;MULTI_CITY&#39;</li>
+<li><strong>daysBeforeTravel:</strong> How many days before travel the search happened</li>
+<li><strong>travelMonth:</strong> Date of travel of the oubound leg in the format YYYYMM</li>
+<li><strong>dayOfWeek:</strong> Day of the week of the oubound leg (Monday is 1)</li>
+<li><strong>lengthOfTripInDays:</strong> Difference in days between the outbound and return leg of the trip</li>
+<li><strong>travelType:</strong> One of DOMESTIC or INTERNATIONAL</li>
+<li><strong>userCityLatitude:</strong> Latitude of the user location</li>
+<li><strong>userCityLongitude:</strong> Longitude of the user location</li>
+<li><strong>userCityName:</strong> City name of the user</li>
+<li><strong>userCountryCode:</strong> Country code of the user</li>
+<li><strong>userRegionCode:</strong> Region name of the user</li>
+<li><strong>userRegionName:</strong> Region code of the user</li>
+<li><strong>distanceToOriginInMetres:</strong> Distance in meters between the user location and the departing airport</li>
 </ul>
 <h3 id='on-exits-redirects-data'>On exits(<strong>redirects</strong>) data:</h3>
 <ul>
@@ -326,8 +338,7 @@
 <li><strong>originIATA:</strong> Origin IATA airport code</li>
 <li><strong>destinationIATA:</strong> Destination IATA airport code</li>
 <li><strong>cabinClass:</strong> Cabin class type, either ECONOMY, BUSINESS, PREMIUMECONOMY, FIRST</li>
-<li><strong>departureDate:</strong> Departure date</li>
-<li><strong>returnDate:</strong> Return date</li>
+<li><strong>departureDate:</strong> Departure date- <strong>returnDate:</strong> Return date</li>
 <li><strong>departureTimeOfDay:</strong> Departure time of day. Either &#39;EARLY_MORNING&#39;, &#39;MORNING&#39;, &#39;AFTERNOON&#39;, &#39;EVENING&#39;. Early Morning (0000 to 0600), Morning (0600 to 1200), Afternoon (1200 to 1800), Evening (1800 to 2400)</li>
 <li><strong>returnTimeOfDay:</strong> Return time of day. Either &#39;EARLY_MORNING&#39;, &#39;MORNING&#39;, &#39;AFTERNOON&#39;, &#39;EVENING&#39;. Early Morning (0000 to 0600), Morning (0600 to 1200), Afternoon (1200 to 1800), Evening (1800 to 2400)</li>
 <li><strong>kind:</strong> Trip type. Either &#39;RETURN&#39;, &#39;ONE_WAY&#39; or &#39;MULTI_CITY&#39;</li>
@@ -336,6 +347,22 @@
 <li><strong>route:</strong> The first leg&#39;s origin city concatenated with the final leg&#39;s destination city.</li>
 <li><strong>pax:</strong> Passenger count</li>
 <li><strong>journeyDuration:</strong> Journey duration in minutes</li>
+<li><strong>departureTimeOfDay:</strong> One of MORNING, AFTERNOON, EVENING for the outbound leg</li>
+<li><strong>returnTimeOfDay:</strong> One of MORNING, AFTERNOON, EVENING for the return leg</li>
+<li><strong>marketingCarriers:</strong> List of carriers on the itinerary selected</li>
+<li><strong>daysBeforeTravel:</strong> How many days before travel the redirect happened</li>
+<li><strong>travelMonth:</strong> Date of travel of the oubound leg in the format YYYYMM</li>
+<li><strong>dayOfWeek:</strong> Day of the week of the oubound leg (Monday is 1)</li>
+<li><strong>firstMarketingCarrier:</strong> First carrier on the selected itinerary</li>
+<li><strong>lengthOfTripInDays:</strong> Difference in days between the outbound and return leg of the trip</li>
+<li><strong>travelType:</strong> One of DOMESTIC or INTERNATIONAL</li>
+<li><strong>userCityLatitude:</strong> Latitude of the user location</li>
+<li><strong>userCityLongitude:</strong> Longitude of the user location</li>
+<li><strong>userCityName:</strong> City name of the user</li>
+<li><strong>userCountryCode:</strong> Country code of the user</li>
+<li><strong>userRegionCode:</strong> Region name of the user</li>
+<li><strong>userRegionName:</strong> Region code of the user</li>
+<li><strong>distanceToOriginInMetres:</strong> Distance in meters between the user location and the departing airport</li>
 </ul>
 <h2 id='supported-aggregations'>Supported Aggregations</h2><h3 id='on-searches-data-2'>On searches data</h3>
 <ul>
@@ -345,6 +372,7 @@
 <ul>
 <li>  <strong>count:</strong> Total number of rows matching given groupby combinations</li>
 <li>  <strong>averageFarePerPax:</strong> Average fare price in USD per pax for rows matching given groupby combinations</li>
+<li>  <strong>sumFarePerPaxInUSD:</strong> Sum of fare price in USD per pax for rows matching given groupby combinations</li>
 </ul>
 <h2 id='supported-query-criteria'>Supported Query Criteria</h2>
 <ul>
@@ -354,6 +382,8 @@
 <li>  Max number of queries allowed in a minute: 1</li>
 <li>  Partner&#39;s API key must be available in <code>API-Key</code> request header</li>
 <li>  Data available for querying dates from 1st October 2019 onwards.</li>
+<li>  Maximum number of results returned in an API call is 10000 and the API does not support paging at this stage.</li>
+<li>  Be aware that <strong>searches</strong> can be done on a city or airport level. Consider this when using the <strong>originIATA</strong> or <strong>destinationIATA</strong> filters. eg all searches for London should use the followings values: LHR, LCY, LGW, LTN, SEN (airport codes) <strong>and</strong> LON (IATA code for the city)</li>
 </ul>
 <h1 id='authentication'>Authentication</h1><h2 id='api-key-based-authentication'>API Key Based Authentication</h2>
 <table><thead>
@@ -388,7 +418,7 @@
   </span><span class="s2">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"groupBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"string"</span><span class="p">],</span><span class="w">
-  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="w">
+  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"count"</span><span class="p">,</span><span class="w"> </span><span class="s2">"averageFarePerPax"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -403,7 +433,16 @@
           </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SG"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">],</span><span class="w">
-      </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="s2">"count"</span><span class="w">
+      </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"count"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"averageFarePerPax"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"765.43"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+      </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
