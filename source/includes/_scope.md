@@ -76,9 +76,9 @@
 ## Supported Query Criteria 
 -	Max number of `filter`s allowed in a query: 11
 -	Max number of dimensions allowed in a `groupBy` query parameter: 3
--	Max date interval supported in a query: 30 days
+-	Max date interval supported in a query: 30 days, by default
 -	Max number of queries allowed in a minute: 1
 -	Partner's API key must be available in `API-Key` request header
--	Data available for querying dates from 1st October 2019 onwards.
+- Data is available for rolling 365 days in the past, by default.
 -	Maximum number of results returned in an API call is 10000 and the API does not support paging at this stage.
 -	Be aware that **searches** can be done on a city or airport level. Consider this when using the **originIATA** or **destinationIATA** filters. eg all searches for London should use the followings values: LHR, LCY, LGW, LTN, SEN (airport codes) **and** LON (IATA code for the city)
