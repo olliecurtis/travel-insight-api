@@ -69,8 +69,7 @@
 
 ### On redirects data
 -   **count:** Total number of rows matching given groupby combinations
--   **averageFarePerPax:** Average fare price in USD per pax for rows matching given groupby combinations
--   **sumFarePerPaxInUSD:** Sum of fare price in USD per pax for rows matching given groupby combinations
+-   **averageFarePerPax:** Average fare price in USD per pax for rows matching given groupby combinations (can only be used alongside `count`)
 
 
 ## Supported Query Criteria 
