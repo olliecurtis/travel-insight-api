@@ -371,8 +371,7 @@
 <h3 id='on-redirects-data'>On redirects data</h3>
 <ul>
 <li>  <strong>count:</strong> Total number of rows matching given groupby combinations</li>
-<li>  <strong>averageFarePerPax:</strong> Average fare price in USD per pax for rows matching given groupby combinations</li>
-<li>  <strong>sumFarePerPaxInUSD:</strong> Sum of fare price in USD per pax for rows matching given groupby combinations</li>
+<li>  <strong>averageFarePerPax:</strong> Average fare price in USD per pax for rows matching given groupby combinations (can only be used alongside <code>count</code>)</li>
 </ul>
 <h2 id='supported-query-criteria'>Supported Query Criteria</h2>
 <ul>
@@ -382,7 +381,7 @@
 <li>  Max number of queries allowed in a minute: 1</li>
 <li>  Partner&#39;s API key must be available in <code>API-Key</code> request header</li>
 <li>Data is available for rolling 365 days in the past, by default.</li>
-<li>  Maximum number of results returned in an API call is 10000 and the API does not support paging at this stage.</li>
+<li>  Maximum number of results returned in an API call is 100000 and the API does not support paging at this stage.</li>
 <li>  Be aware that <strong>searches</strong> can be done on a city or airport level. Consider this when using the <strong>originIATA</strong> or <strong>destinationIATA</strong> filters. eg all searches for London should use the followings values: LHR, LCY, LGW, LTN, SEN (airport codes) <strong>and</strong> LON (IATA code for the city)</li>
 </ul>
 <h1 id='authentication'>Authentication</h1><h2 id='api-key-based-authentication'>API Key Based Authentication</h2>
